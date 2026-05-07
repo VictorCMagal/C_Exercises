@@ -1,0 +1,247 @@
+/******************************************************************************
+Vetor
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int p;
+    float v[5];
+    /* Registro */
+    for(p=1;p<=5;p++){
+        printf("Digite nota: ");
+        scanf("%f",&v[p]);
+    }
+    /* Imprimir */
+    for(p=1;p<=5;p++){
+        printf("\nNota: %.2f", v[p]);
+    }
+    
+    /* Imprimir mostrando posição do vetor */
+    for(p=1;p<=5;p++){
+        printf("\nNota [%d]: %.2f",p, v[p]);
+    }
+
+    return 0;
+}
+-------------------------------------------------------------------------------
+1. Construa um programa que preenche um vetor de inteiros de 100 números, colocando 0 nas posições par e 1 ímpar.
+-------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int p;
+    float v[100];
+    /* Registro */
+    for(p=1;p<=100;p++){
+        if(p % 2 == 0){
+          v[p] = 0;  
+        }else{
+          v[p] = 1;  
+        }
+    }
+    
+    /* Imprimir mostrando posição do vetor */
+    for(p=1;p<=100;p++){
+        printf("\nNumero [%d]: %.2f",p, v[p]);
+    }
+
+    return 0;
+}
+-------------------------------------------------------------------------------
+2. Construa um programa que lê, soma e imprime o resultado da soma de um vetor de inteiros de 10 posições.
+-------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int p,v_i[10];
+    float v[10];
+    
+    v_i[0]=0;
+    
+    /* Registro */
+    for(p=1;p<=10;p++){
+        printf("Numero Inteiro: ");
+        scanf("%d",&v_i[p]);
+        
+        v_i[p] = v_i[p] + v_i[p-1];
+        printf("\n[%d]Numero: %d\n",p, v_i[p]);
+
+    }
+    
+    /* Imprimir mostrando posição do vetor */
+    printf("Contagem final:\n");
+    for(p=1;p<=10;p++){
+        printf("\nNumero [%d]: %d",p, v_i[p]);
+    }
+
+    return 0;
+}
+-------------------------------------------------------------------------------
+3. Construa um programa que multiplique os valores de um vetor de reais de 20 posições pelo valores de um outro vetor de reais de 20 posições. Os resultados das multiplicações devem ser armazenados num terceiro vetor.
+-------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int p,v_i1[20],v_i2[20],v_i3[20];
+    float v[10];
+    
+    /* Prep Tabela */
+    for(p=1;p<=20;p++){
+        v_i1[p] = p;
+        v_i2[p] = 21 - p;
+    }
+    
+    /* Calculo */
+    for(p=1;p<=20;p++){
+        
+        v_i3[p] = v_i1[p] * v_i2[p];
+        printf("\n[%d]Calculo: [%d] x [%d] = %d",p, v_i1[p],v_i2[p],v_i3[p]);
+
+    }
+
+    return 0;
+}
+-------------------------------------------------------------------------------
+4. Construa um programa que leia e guarde os elementos em um vetor de 20 posições. Em seguida o algoritmo ordena os elementos do vetor de acordo com a seguinte estratégia: Selecione o elemento do vetor que guarda o menor e o maior valor. 
+-------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int p,v_i[20],maior,menor,maior_p,menor_p;
+    float v[20];
+    
+    maior=0;
+    menor=99999999;
+    
+    /* Registro */
+    for(p=1;p<=20;p++){
+        printf("Numero Inteiro: ");
+        scanf("%d",&v_i[p]);
+        
+        printf("\n[%d]Numero: %d\n",p, v_i[p]);
+
+    }
+    /*Pegar maior e menor */
+    for(p=1;p<=20;p++){
+        if(v_i[p]>=maior){
+            maior = v_i[p];
+            maior_p = p;
+        }
+        
+        if(v_i[p]<=menor){
+            menor = v_i[p];
+           menor_p = p;
+        }
+    }
+    
+    
+    /* Imprimir mostrando posição do vetor */
+    printf("Contagem final:\n");
+    printf("\nMAIOR vetor: [%d], Valor = %d",maior_p, maior);
+    printf("\nMenor vetor: [%d], Valor = %d",menor_p, menor);
+
+    return 0;
+}
+-------------------------------------------------------------------------------
+5. Fazer um programa que preenche um vetor de 10 posições contendo as notas dos alunos de uma turma. Em seguida o programa deve imprimir a media aritmética dos 10 alunos.
+-------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int p,v_i[10];
+    float v[10],media;
+    
+    media=0;
+    
+    /* Registro */
+    for(p=1;p<=10;p++){
+        printf("Nota do aluno [%d]: ",p);
+        scanf("%f",&v[p]);
+        media = media + v[p];
+    }
+    
+    media = media /10;
+    
+    /* Imprimir mostrando posição do vetor */
+    printf("\nMedia aritmética: %.2f", media);
+
+    return 0;
+}
+-------------------------------------------------------------------------------
+6. Faça um programa que leia 100 números inteiros em um vetor e depois exiba esses valores na ordem inversa das posições.
+-------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int p,v_i[100],x;
+    float v[10],media;
+    
+    x = 410;
+    
+    /* Registro */
+    for(p=1;p<=100;p++){
+
+    x = (x * 37 + 17) % 1000;
+        
+    v_i[p] = x;
+    
+    x = x + (v_i[p]-1);
+    }
+    
+    /* Imprimir variaveis */
+    for(p=100;p>=1;p--){
+    printf("\nPosição do vetor: %d Valor= %d", p,v_i[p]);
+}
+    return 0;
+}
+-------------------------------------------------------------------------------
+7. Construa um programa que lê 100 números inteiros e imprime o resultado da media dos números impares de um vetor que estão na posição par.
+-------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int p,v_i[100],x, Num_conter;
+    float v[10],media;
+    
+    Num_conter = 0;
+    media = 0;
+    x = 110;
+    
+    /* Registro */
+    for(p=1;p<=100;p++){
+
+    x = (x * 7 + 12) % 1000;
+        
+    v_i[p] = x;
+    
+    x = x + (v_i[p]-1);
+    
+    printf("\nPosição do vetor: %d Valor= %d", p,v_i[p]);
+    /* números impares de um vetor que estão na posição par */
+    if(p % 2 == 0){
+        if(v_i[p] % 2 != 0){
+            Num_conter++;
+            media = media + v_i[p];
+        }
+    }
+    
+    }
+    
+    /* Imprimir variaveis */
+    media = media/Num_conter;
+    
+    printf("\n\nQuatidade de numeros impares= %d]", Num_conter);
+    
+    printf("\nMedia dos números impares= %.2f", media);
+
+    return 0;
+}

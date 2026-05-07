@@ -1,0 +1,75 @@
+Compilador GDB
+*******************************************************************
+tipos de dado:
+*******************************************************************
+-void
+-int = Num +&- [%d %i]
+-float = Num int & 0.1 [%f] <-- %.2f mostra 2 casas decimais
+-char = "Text","Num", etc.. [%c = 1char %s = many chars]
+
+int idade, matt, code;
+float saldo, media, not;
+char nome[100],email[50],endereco[100];
+
+*******************************************************************
+Eentrada, process & saída
+*******************************************************************
+
+ENTRADA:
+scanf("%s",&nome); <-- Armazena o que digitei na var "nome"
+	           <-- & = associar a var "nome"
+
+SAIDA:
+printf("Digite seu nome:");
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#include <stdio.h>
+/* 
+#include <string.h>
+*/
+
+int main()
+{
+
+int idade, matt, code;
+float saldo, media, nota;
+char nome[100],email[50],endereco[100];
+
+/*
+    strcpy(email, "default@email.com");
+    strcpy(endereco, "no address");
+*/
+    
+    
+    printf("Digite o nome: \n");
+    scanf("%s",&nome);
+    printf("\n");
+    
+    printf("Digite o email: \n");
+    scanf("%s",&email);
+    printf("\n");
+    
+    printf("Digite o address: \n");
+    scanf("%s",&endereco);
+    printf("\n");
+    
+    printf("Digite a idade: \n");
+    scanf("%i",&idade);
+    printf("\n");
+    
+    
+    printf("Digite a Nota: \n");
+    scanf("%f",&nota);
+    printf("\n");
+    
+    printf("Idade: %i\n", idade);
+    printf("Sua Nota: %.2f\n", nota);
+    printf("Variable Nome: %s\n", nome);
+    printf("Variable Email: %s\n", email);
+    printf("Variable Address: %s\n", endereco);
+    printf("\n");
+
+    return 0;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

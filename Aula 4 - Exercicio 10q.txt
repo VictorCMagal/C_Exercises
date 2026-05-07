@@ -1,0 +1,220 @@
+Victor C. Magalhães
+------------------------------------------------------------------------------------------------------------
+Questão 1 – Soma de números
+------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumSoma;
+    
+    printf("Digite o primeiro Numero: ");
+    scanf("%d", &Num);
+    
+    printf("Digite o segundo Numero: ");
+    scanf("%d", &NumPlus);
+
+    NumSoma = Num + NumPlus;
+    
+    printf("O Resultado da soma dos numero são = %d", NumSoma);
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+Questão 2 – Média aritmética
+-----------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float media;
+    
+    printf("Digite o primeiro Numero: ");
+    scanf("%d", &Num);
+    
+    printf("Digite o segundo Numero: ");
+    scanf("%d", &NumPlus);
+    
+    printf("Digite o terseiro Numero: ");
+    scanf("%d", &NumMore);
+
+    media = (Num + NumPlus + NumMore) /3;
+    
+    printf("Media dos numeros = %.2f", media);
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+Questão 3 – Conversão de temperatura
+-----------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float media;
+    
+    printf("Qual tempera para converta para Fahrenheit: ");
+    scanf("%d", &Num);
+
+    media = (Num * 9/5) + 32;
+    
+    printf("A temperatura em Fahrenheit é = %.2f", media);
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+Questão 4 – Cálculo de salário
+-----------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float valor,media;
+    
+    printf("Digite o numero de horas trabalhadas: ");
+    scanf("%d", &Num);
+    
+    printf("Digite o valor da hora em R$: ");
+    scanf("%f", &valor);
+
+    media = Num * valor;
+    
+    printf("Salario total = %.2f", media);
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+Questão 5 – Área de retângulo
+-----------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float valor,media;
+    
+    printf("Digite a base do retangulo: ");
+    scanf("%d", &Num);
+    
+    printf("Digite a altura do retangulo: ");
+    scanf("%d", &NumPlus);
+
+    NumMore = Num * NumPlus;
+    
+    printf("Area do retangulo = %d", NumMore);
+
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+Questão 6 – Dobro e triplo
+-----------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float valor,media;
+    
+    printf("Digite o numero para ser dobrado e triplicado: ");
+    scanf("%d", &Num);
+    
+    NumMore = Num * 2;
+    
+    printf("\nO dobro do numero é = %d", NumMore);
+
+    NumMore = Num * 3;
+    
+    printf("\nO triplo do numero é = %d", NumMore);
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+Questão 7 – Conversão de medidas
+-----------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float valor,v_cm,v_mm;
+    
+    printf("Digite quantos metros para ser convertido para Cm e Mm: ");
+    scanf("%f", &valor);
+    
+    v_cm = valor * 100;
+    v_mm = valor * 1000;
+    
+    printf("\nValor em centimetros é = %.2fcm", v_cm);
+    
+    printf("\nValor em milimetros é = %.2fmm", v_mm);
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+Questão 8 – Cálculo de desconto
+-----------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float valor,Percentual,Calc;
+    
+    printf("Valor do produto: ");
+    scanf("%f", &valor);
+    
+    printf("Percentual de desconto: ");
+    scanf("%f", &Percentual);
+    
+    Calc = (valor * Percentual) / 100;
+    valor = valor + Calc;
+    
+    printf("\nValor final = %.2f", valor);
+    
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+Questão 9 – Consumo de combustível
+-----------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float valor,litros,Calc;
+    
+    printf("Qual foi a distancia percorrida em Km: ");
+    scanf("%f", &valor);
+    
+    printf("Quanto combustivel foi gasto em Litros: ");
+    scanf("%f", &litros);
+    
+    Calc = (valor / litros);
+    
+    printf("\nO consumo medio foi = %.2f Km/l", Calc);
+    
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+Questão 10 – IMC
+-----------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float peso,altura,Calc;
+    
+    printf("Qual é o peso da pessoa em Kg: ");
+    scanf("%f", &peso);
+    
+    printf("Qual é a altura em metros: ");
+    scanf("%f", &altura);
+    
+    Calc = peso / (altura * altura);
+    
+    printf("\nÍndice de Massa Corporal [IMC] = %.2f", Calc);
+    
+    return 0;
+}

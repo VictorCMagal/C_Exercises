@@ -1,0 +1,336 @@
+------------------------------------------------------------------------------
+1)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,id,cont=1;
+    float peso,altura,Calc;
+    
+    while(cont<=10){
+    printf("\nContando Variavel: %d",cont);
+    cont++;
+    
+    }
+    
+    printf("\nContagem Concluida");
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+2)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,id,result,cont=1;
+    float peso,altura,Calc;
+    
+    printf("Qual numero desejas para tabuada: ");
+    scanf("%d",&id);
+    result = id * cont;
+    
+    while(cont<=10){
+    printf("\nNumero %d x %d: %d", id,cont,result);
+    cont++;
+    result = id * cont;
+    
+    
+    }
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+3)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,id,result,cont=1;
+    float peso,altura,Calc;
+    
+    printf("Números pares que existem entre 1 e 50: ");
+    Num = 1;
+
+    while(cont<=50){
+        
+        if(Num % 2 == 0){
+        printf("\nNumero: %d", Num);    
+        }
+        
+    cont++;
+    Num++;
+    
+    }
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+4)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,MoreNum,result=0,cont=1;
+    float peso,altura,Calc;
+    
+    printf("Digite um numero: ");
+    scanf("%d",&Num);
+
+    while(Num!=0){
+        result = Num + result;
+        printf("\nNumeros somados: %d", result);
+        
+        printf("\nDigite um numero: ");
+        scanf("%d",&Num);
+    }
+    
+    printf("\nPrograma terminado, Resultado final: %d", result);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+5)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,MoreNum,result=0,cont=1;
+    float peso,altura,Calc;
+    
+    printf("Digite a senha correta (4 digitos): ");
+    scanf("%d",&Num);
+
+    while(Num!=1234){
+        printf("\nSenha Errada!");
+        
+        printf("\nDigite a senha correta (4 digitos): ");
+        scanf("%d",&Num);
+    }
+    
+    printf("\nSenha Correta! :D");
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+6)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,MoreNum,result=0,cont=1;
+    float peso,altura,Calc;
+    
+    printf("Digite um Numero positivo: ");
+    scanf("%d",&Num);
+
+    while(Num>=0){
+        printf("\nBOA!");
+        
+        printf("\nDigite um Numero positivo: ");
+        scanf("%d",&Num);
+    }
+    
+    printf("\nNumero NEGATIVO USADO! Programa terminado :C");
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+7)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,id,cont=1;
+    float peso,altura,Calc;
+    
+    do{
+    printf("\nContando Variavel: %d",cont);
+    cont++;
+    
+    }while(cont<=10);
+    
+    printf("\nContagem Concluida");
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+8)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int result=0,cont=0,Num;
+    float peso,media=0,altura,Calc=0;
+    
+    printf("Digite um Numero: ");
+    scanf("%d",&Num);
+
+    while(Num!=-1){
+        cont++;
+        Calc = Num + Calc;
+        printf("\nDigite um Numero novamente: ");
+        scanf("%d",&Num);
+        
+    }
+    
+    media = Calc / cont;
+    printf("\nMedia: %.2f", media);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+9)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int result=0,cont=0,Num;
+    float peso,media=0,altura,Calc=0;
+
+    printf("Qual é o menu de hoje?\n");
+    
+    while(Num!=0){
+        
+    printf("[1 - Sopa][2 - Batata][3 - Cebola][0 - SAIR]\n");
+    scanf("%d",&Num);
+        
+    }
+    
+    printf("\nPrograma terminado!");
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+10)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int result=0,cont,Num;
+    float peso,media=0,altura,Calc=0;
+
+    for(cont=1;cont<=20;cont++){
+        printf("Contando: %d\n",cont);
+    }
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+11)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,id,result,cont=1;
+    float peso,altura,Calc;
+    
+    printf("Números pares que existem entre 1 e 50: ");
+    Num = 1;
+
+    while(cont<=50){
+        
+        if(Num % 2 != 0){
+        printf("\nNumero: %d", Num);    
+        }
+        
+    cont++;
+    Num++;
+    
+    }
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+12)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int variable=0,cont,Num;
+    float peso,media=0,altura,Calc=0;
+    
+    printf("Qual numero desejas ser contado de 1 a N?\n");
+    printf("N = ");
+    scanf("%d",&Num);
+
+    for(cont=1;cont<=Num;cont++){
+        variable = cont + variable;
+    }
+    
+    printf("\nSoma dos numeros de 1 a N= %d",variable);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+13)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num=1,id=1,result=1,cont=1;
+    float peso,altura,Calc;
+    
+    while(cont<=10){
+    printf("\n[%d]Numero %d x %d: %d",Num, id,cont,result);
+    cont++;
+    result = id * cont;
+    
+    if((cont==11)&&(Num<5)){
+    
+    Num++;
+    id++;
+    cont=1;
+    result=id * cont;
+    printf("\n");
+    }
+    
+    }
+    
+    printf("\n\nTabuada concluida!");
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+14)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,id,Num_div3=0,cont=1;
+    float peso,altura,Calc;
+    
+    printf("Números divisiveis por 3 que existem entre 1 e 100: ");
+    Num = 1;
+
+    while(cont<=100){
+        
+        if(Num % 3 == 0){
+        printf("\nNumero: %d", Num);
+        Num_div3++;
+        }
+        
+    cont++;
+    Num++;
+    
+    }
+    
+    printf("\n\nQuantidade de numeros divisiveis por 3: %d", Num_div3);
+    
+    return 0;
+}
+

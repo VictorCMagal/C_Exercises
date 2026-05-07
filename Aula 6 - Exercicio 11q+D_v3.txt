@@ -1,0 +1,524 @@
+--------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,id,cont=1;
+    float peso,altura,Calc;
+    
+    while(cont<=37){
+    printf("Digite idade: ");
+    scanf("%d",&id);
+    cont++;
+    
+    }
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,id,cont=1;
+    
+    do{
+    printf("Digite idade: ");
+    scanf("%d",&id);
+    cont++;
+    
+    }
+    
+    while(cont<=37);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,id,cont;
+    
+    for(cont=1;cont<=37;cont++)
+    {
+
+    printf("Digite idade: ");
+    scanf("%d",&id);
+    
+    }
+    
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+1)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,MaxNum=0,cont=-1;
+    float peso,altura,Calc;
+    
+    while(cont!=0){
+    printf("Digite o numero secreto: ");
+    scanf("%d",&Num);
+    cont = Num;
+    
+    if (Num >= MaxNum){
+        MaxNum = Num;
+    }
+    
+    }
+    printf("\nO maior numero é: %d ",MaxNum);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+2)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,cont=1;
+    float media,temp_var=0,Calc;
+    
+    while(cont<=50){
+    printf("Digite a nota do aluno Numero = %d: ",cont);
+    scanf("%d",&Num);
+    cont++;
+    temp_var = temp_var + Num;
+    }
+    
+    if (cont == 51){
+        temp_var = temp_var / 50;
+    }
+    
+    
+    printf("\nA media total é: %.2f ",temp_var);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+3)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,cont=1;
+    float media,temp_var=0,Calc;
+    
+    do{
+    printf("Digite a nota do aluno Numero = %d: ",cont);
+    scanf("%d",&Num);
+    cont++;
+    temp_var = temp_var + Num;
+    }while(cont<=50);
+    
+    if (cont == 51){
+        temp_var = temp_var / 50;
+    }
+    
+    
+    printf("\nA media total é: %.2f ",temp_var);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+4)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,cont;
+    float media,temp_var=0,Calc;
+    
+   for(cont=1;cont<=50;cont++){
+    printf("Digite a nota do aluno Numero = %d: ",cont);
+    scanf("%d",&Num);
+    temp_var = temp_var + Num;
+    }
+    
+    if (cont == 51){
+        temp_var = temp_var / 50;
+    }
+    
+    
+    printf("\nA media total é: %.2f ",temp_var);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+5)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,cont;
+    float media,temp_var=0,Calc=0
+    
+   for(cont=1;cont<=50;cont++){
+    printf("Digite um Numero = %d: ",cont);
+    scanf("%d",&Num);
+    
+    if (Num % 2 == 0) {
+        //printf("O número é par.\n");
+    } else {
+        temp_var = temp_var + Num;
+	Calc++;
+    }
+    
+    }
+    
+    if (cont == 51){
+        temp_var = temp_var / Calc;
+    }
+    
+    
+    printf("\nA media total é: %.2f ",temp_var);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+6)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,cont;
+    float media,temp_var=0,Calc=0;
+    
+   for(cont=1;cont<=50;cont++){
+    printf("Digite um Numero = %d: ",cont);
+    scanf("%d",&Num);
+    
+    if (Num % 2 == 0){
+        //printf("O número é par.\n");
+    } else {
+        if((Num>=100)&&(Num<=200)){
+        temp_var = temp_var + Num;
+        Calc++;
+        }
+    }
+    
+    }
+    
+    if (cont == 51){
+        temp_var = temp_var / Calc;
+    }
+    
+    
+    printf("\nA media total é: %.2f ",temp_var);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+7)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,cont,MaxNum=0,MinNum=0;
+    float media,temp_var=0,Calc=0;
+    
+   for(cont=1;cont<=20;cont++){
+    printf("Digite um Numero [%d]: ",cont);
+    scanf("%d",&Num);
+    
+    if (Num>=MaxNum){
+        MaxNum = Num;
+    }
+    
+    if (Num<=MinNum){
+        MinNum = Num;
+    }
+    }
+    
+    printf("\nO Maior numero é: %d ",MaxNum);
+    printf("\nO Menor numero é: %d ",MinNum);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+8)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num_A,Num_B,cont;
+    float media,temp_var=0,Calc=0;
+    
+    printf("Digite dois numeros inteiros [A B]: ");
+    scanf("%d %d", &Num_A, &Num_B);
+    
+   for(cont=0;cont<Num_B;cont++){
+    temp_var = temp_var + Num_A;
+    }
+    
+    printf("\nO Resultado é: %.2f ",temp_var);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+9)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num=-1,cont=0;
+    float media,temp_var=0,Calc,Par_Stack,Par_cont;
+    
+    printf("Use Zero para parar o loop!\n");
+    
+    while(Num!=0){
+    printf("Digite algum Numero = ");
+    scanf("%d",&Num);
+    
+    if ((Num % 2 == 0)&&(Num!=0)) {
+       Par_Stack = Par_Stack + Num;
+       Par_cont++;
+    }
+    }
+    
+    temp_var = Par_Stack / Par_cont;
+    
+    
+    printf("\nA media dos numeros pares é: %.2f ",temp_var);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+10)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,cont,MScore,flag_MS_2=0,Idade;
+    float media,MALE_media,temp_var=0,Calc=0,Idade_Stack,Idade_counter,MALE_counter,MALE_Rage;
+    
+   for(cont=1;cont<=15;cont++){
+    printf("Pessoa Numero [%d] qual Sexo? [1-F/2-M]: ",cont);
+    scanf("%d",&Num);
+    
+    if (Num<=1){ // FEMALE
+    
+            printf("[%d] Qual opinião sobre o filme?\n 1-Não gostei. \n 2-Esperava mais\n 3-Vale o ingresso\n 4-Exelente\n -> ",cont);
+            scanf("%d", &MScore);
+            
+            if(MScore==2){
+                flag_MS_2++; // Var para letra c)
+            }
+            
+            if(MScore==4){
+                printf("[%d] Qual sua idade? ",cont);
+                scanf("%d", &Idade);
+                Idade_Stack = Idade_Stack + Idade;
+                Idade_counter++; // contador para divisão
+            }
+            
+    }else{ // MALE
+    
+         printf("[%d] Qual opinião sobre o filme?\n 1-Não gostei. \n 2-Esperava mais\n 3-Vale o ingresso\n 4-Exelente\n -> ",cont);
+            scanf("%d", &MScore);
+            MALE_counter++;// contador para b)
+            
+            if(MScore==2){
+                flag_MS_2++; // Var para letra c)
+            }
+            
+            if(MScore==1){
+                MALE_Rage++; // contador para b)
+            }
+    }
+    
+   }
+    
+    media = Idade_Stack / Idade_counter;
+    MALE_media = (100 * MALE_Rage) / MALE_counter;
+    
+    printf("\nA) Média da idade das mulheres que acharam o filme Exelente é: %.2f ",media);
+    printf("\nB) O percentual de homens que não gostaram do filme é de %.2f%% ",MALE_media);
+    printf("\nC) Quantidade de pessoas que esperavam mais do filme: %d",flag_MS_2);
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+11)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num, cont=1, canal, total=0, sbt=0, record=0, globo=0, redetv=0, maior=1, menor=1, canal_maior=1,canal_menor=1;
+    float p_sbt, p_record, p_globo, p_redetv;
+
+    for(;;){
+    
+    printf("[%d]Digite o canal assistido (1-SBT, 2-Record, 3-Globo, 4-RedeTV,): ",cont);
+    scanf("%d",&Num);
+    cont++;
+
+    if(Num == 1){
+       
+        sbt++;
+        total++;
+    }
+    
+    if(Num == 2){
+       
+        record++;
+        total++;
+    }
+    
+    if(Num == 3){
+       
+        globo++;
+        total++;
+    }
+    
+    if(Num == 4){
+       
+        redetv++;
+        total++;
+    }
+    
+    if((Num > 4)||(Num < 1)){
+       
+        printf("Canal inválido!\n");
+        total++;
+    }
+
+    p_sbt = (sbt * 100) / total;
+    p_record = (record * 100) / total;
+    p_globo = (globo * 100) / total;
+    p_redetv = (redetv * 100) / total;
+
+    printf("\nAudiência: [SBT: %.2f%%] [Record: %.2f%%] [Globo: %.2f%%] [RedeTV: %.2f%%]",p_sbt,p_record,p_globo,p_redetv);
+
+    //Hot fix
+    //if(canal_maior == canal_menor){
+    //    menor = 0;
+    //}
+    
+    // Maior audiência
+    maior = sbt;
+    canal_maior = 1;
+    
+    if(record > maior){
+        maior = record;
+        canal_maior = 2;
+    }
+    if(globo > maior){
+        maior = globo;
+        canal_maior = 3;
+    }
+    if(redetv > maior){
+        maior = redetv;
+        canal_maior = 4;
+    }
+
+    // Menor audiência
+    menor = sbt;
+    canal_menor = 1;
+    
+    if(record < menor){
+        menor = record;
+        canal_menor = 2;
+    }
+    if(globo < menor){
+        menor = globo;
+        canal_menor = 3;
+    }
+    if(redetv < menor){
+        menor = redetv;
+        canal_menor = 4;
+    }
+    
+
+    printf("\nCanal com maior audiência: ");
+    
+    if(canal_maior == 1){
+       
+    printf("SBT");
+    }
+    
+    if(canal_maior == 2){
+       
+    printf("Record");
+    }
+    
+    if(canal_maior == 3){
+       
+    printf("Globo");
+    }
+    
+    if(canal_maior == 4){
+       
+    printf("RedeTV");
+    }
+    
+    printf("\nCanal com menor audiência: ");
+    
+    if(canal_menor == 1){
+       
+    printf("SBT\n");
+    }
+    
+    if(canal_menor == 2){
+       
+    printf("Record\n");
+    }
+    
+    if(canal_menor == 3){
+       
+    printf("Globo\n");
+    }
+    
+    if(canal_menor == 4){
+       
+    printf("RedeTV\n");
+    }
+    
+    } // <---- from FOR(;;)
+
+
+    return 0;
+}
+------------------------------------------------------------------------------
+Desafio)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,id,cont,fat=1;
+    
+    printf("Qual fatorial numerico desejas? ");
+    scanf("%d",&Num);
+    //fat = Num--;
+    
+    if(Num >= 0){ // Trigger the loop
+        for(cont=1;cont<=Num;cont++){
+        fat = fat * cont;    
+        }
+        
+    }else{
+        printf("ERROR!");
+        
+    }
+
+    printf("Resultado: %d",fat);
+    
+    
+    return 0;
+}

@@ -1,0 +1,519 @@
+-----------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+int idade;
+
+    printf("Idade: ");
+    scanf("%d",&idade);
+    
+    if(idade>=18){
+    printf("MAIOR DE IDADE");
+    }else{
+    printf("MENOR DE IDADE");
+    }
+
+    
+       return 0;
+}
+-------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+int idade;
+
+    printf("Idade: ");
+    scanf("%d",&idade);
+    
+    if(idade<=12){
+    printf("Criança");
+    }
+    
+    if((idade>=13) && (idade<=17)){
+    printf("Adolescente");
+    }
+    
+    if((idade>=18) && (idade<60)){
+    printf("Adult");
+    }
+    
+    if(idade>=60){
+    printf("Idoso");
+    }
+
+    
+       return 0;
+}
+--------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+int idade;
+
+    printf("Idade: ");
+    scanf("%d",&idade);
+    
+    if(idade<=12){
+    printf("Criança");
+    }
+    
+    else if((idade>=13) && (idade<=17)){
+    printf("Adolescente");
+    }
+    
+    else if((idade>=18) && (idade<60)){
+    printf("Adult");
+    }
+    
+    else{
+    printf("Idoso");
+    }
+
+    
+       return 0;
+}
+--------------------------------------------------------------------------------
+1)
+--------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+int var;
+
+    printf("Digite um numero inteiro: ");
+    scanf("%d",&var);
+    
+    if(var<0){
+    printf("Numero negativo");
+    }
+    
+    if(var==0){
+    printf("ZERO");
+    }
+    
+    if(var>0){
+    printf("Numero positivo");
+    }
+    
+    
+       return 0;
+}
+------------------------------------------------------------------------------
+2)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float peso,altura,Calc;
+    
+    printf("Qual é o peso da pessoa em Kg: ");
+    scanf("%f", &peso);
+    
+    printf("Qual é a altura em metros: ");
+    scanf("%f", &altura);
+    
+    Calc = peso / (altura * altura);
+    
+    printf("\nÍndice de Massa Corporal [IMC] = %.2f", Calc);
+    
+    if (Calc < 18.5){
+    printf("\nAbaixo do peso");
+    }
+    
+    if ((Calc >= 18.5)&&(Calc <= 25)){
+    printf("\nPeso normal");
+    }
+    
+    if ((Calc > 25)&&(Calc <= 30)){
+    printf("\nAcima do peso");
+    }
+    
+    if (Calc > 30){
+    printf("\nObeso");
+    }
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+3)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float peso,altura,Calc;
+    
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &Num);
+    
+    printf("Digite o segundo numero: ");
+    scanf("%d", &NumPlus);
+    
+    if (Num > NumPlus){
+    printf("\nO Primeiro numero é maior!");
+    }
+    
+    if (Num < NumPlus){
+    printf("\nO Segundo numero é maior!");
+    }
+    
+    if (Num == NumPlus){
+    printf("\nDRAW");
+    }
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+4)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float peso,altura,Calc;
+    
+    printf("Digite o numero: ");
+    scanf("%d", &Num);
+    
+    if (Num % 2 == 0) {
+        printf("O número é par.\n");
+    } else {
+        printf("O número é ímpar.\n");
+    }
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+5)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float Nota1,Nota2,Calc;
+    
+    printf("Digite a primeira nota: ");
+    scanf("%f", &Nota1);
+    
+    printf("Digite a segunda nota: ");
+    scanf("%f", &Nota2);
+    
+    Calc = (Nota1 + Nota2)/2;
+    
+    printf("Media: %.1f \n",Calc);
+    
+    if (Calc >=7 ) {
+        printf("Aprovado.\n");
+    } else {
+        printf("Reprovado.\n");
+    }
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+6)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float peso,altura,Calc;
+    
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &Num);
+    
+    printf("Digite o segundo numero: ");
+    scanf("%d", &NumPlus);
+    
+    printf("Digite o terseiro numero: ");
+    scanf("%d", &NumMore);
+    
+    if ((Num > NumPlus)&&(Num > NumMore)){
+    printf("\nO Primeiro numero é maior!");
+    }
+    
+    if ((NumPlus > Num)&&(NumPlus > NumMore)){
+    printf("\nO Segundo numero é maior!");
+    }
+    
+    if ((NumMore > NumPlus)&&(NumMore > Num)){
+    printf("\nO Terseiro numero é maior!");
+    }
+    
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+7)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float peso,altura,Calc;
+    
+    printf("Digite o salario do funcionario: ");
+    scanf("%d", &Num);
+    
+    if (Num < 1000){
+        Calc = Num * 1.1;
+    printf("\n[+10%]O novo salario é : %.2f",Calc);
+    }else{
+        Calc = Num * 1.05;
+    printf("\n[+5%]O novo salario é : %.2f",Calc);
+    }
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+8)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float peso,altura,Calc;
+    
+    printf("Digite o salario do funcionario: ");
+    scanf("%d", &Num);
+    
+    if ((Num >= 10)&&(Num <=50)){
+        
+    printf("\nO numero esta dentro da range!");
+    }else{
+        
+    printf("\nO numero esta FORA da range!");
+    }
+    
+    return 0;
+}
+
+------------------------------------------------------------------------------
+9)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float peso,altura,Calc;
+    char sexy;
+    
+    printf("Digite o sexo do boneco [M/F]: ");
+    scanf("%c", &sexy);
+    
+
+    if ((sexy == 'M')||(sexy == 'm')) {
+        printf("Masculino\n");
+    } else if ((sexy == 'F')||(sexy == 'f')) {
+        printf("Feminino\n");
+    } else {
+        printf("Valor inválido\n");
+    }
+
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+10)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float peso,altura,Calc;
+    int simb;
+    
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &Num);
+    
+    printf("Digite o segundo numero: ");
+    scanf("%d", &NumPlus);
+    
+    printf("Qual operação deseja utilizar?\n 1-Soma \n 2-Subtração\n 3-Divisão\n 4-Multiplicar\n -> ");
+    scanf("%d", &simb);
+    
+    if (simb == 1){
+        Calc = Num + NumPlus;
+    printf("\n[SOMA] %d + %d = %.1f",Num,NumPlus,Calc);
+    }
+    
+    if (simb == 2){
+        Calc = Num - NumPlus;
+    printf("\n[SUB] %d - %d = %.1f",Num,NumPlus,Calc);
+    }
+    
+    if (simb == 3){
+    Calc = Num / NumPlus;
+    printf("\n[DIV] %d / %d = %.1f",Num,NumPlus,Calc);
+    }
+    
+    if (simb == 4){
+    Calc = Num * NumPlus;
+    printf("\n[MULTI] %d * %d = %.1f",Num,NumPlus,Calc);
+    }
+    
+    
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+11)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float peso,altura,Calc;
+    
+    printf("Digite o numero A: ");
+    scanf("%d", &Num);
+    
+    printf("Digite o numero B: ");
+    scanf("%d", &NumPlus);
+    
+    printf("Digite o numero C: ");
+    scanf("%d", &NumMore);
+    
+    if (Num == NumPlus){
+    printf("\nNumero A = B");
+    }
+    
+    if (Num == NumMore){
+    printf("\nNumero A = C");
+    }
+    
+    if (NumPlus == NumMore){
+    printf("\nNumero B = C");
+    }
+    
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+12)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore,NumMAX;
+    float peso,altura,Calc;
+    
+    printf("Digite o numero A: ");
+    scanf("%d", &Num);
+    
+    printf("Digite o numero B: ");
+    scanf("%d", &NumPlus);
+    
+    printf("Digite o numero C: ");
+    scanf("%d", &NumMore);
+    
+    
+    if ((Num>=NumPlus)&&(Num>=NumMore)){
+        
+        printf("\nOrdem crescente: [A] %d > ",Num);
+        
+        if (NumPlus>=NumMore){
+            printf("[B] %d > [C] %d",NumPlus,NumMore);
+        }else{
+            printf("[C] %d > [B] %d",NumMore,NumPlus);
+        }
+    
+    }
+    
+    if ((NumPlus>Num)&&(NumPlus>=NumMore)){
+        printf("\nOrdem crescente: [B] %d > ",NumPlus);
+        
+        if (Num>=NumMore){
+            printf("[A] %d > [C] %d",Num,NumMore);
+        }else{
+            printf("[C] %d > [A] %d",NumMore,Num);
+        }
+    
+    }    
+    
+    if ((NumMore>Num)&&(NumMore>=NumPlus)){
+        printf("\nOrdem crescente: [C] %d > ",NumMore);
+        
+        if (Num>=NumMore){
+            printf("[A] %d > [B] %d",Num,NumPlus);
+        }else{
+            printf("[B] %d > [A] %d",NumPlus,Num);
+        }
+    
+    }
+    
+    
+    return 0;
+}
+------------------------------------------------------------------------------
+13)
+------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumMore;
+    float peso,altura,Calc;
+    
+    printf("Digite do numero 1 ao 7: ");
+    scanf("%d", &Num);
+    
+    if (Num == 0){
+    printf("\n[0] - Você pertence ao EIXO TECNOLÓGICO");
+    }
+    
+    if (Num == 1){
+    printf("\n[1] - Você pertence ao curso de ADS");
+    }
+    
+    if (Num == 2){
+    printf("\n[2] - Você pertence ao curso de JOGOS DIGITAIS");
+    }
+    
+    if (Num == 3){
+    printf("\n[3] - Você pertence ao curso de Moda");
+    }
+    
+    if (Num == 4){
+    printf("\n[4] - Você pertence ao curso de Gastronomia");
+    }
+    
+    if (Num == 5){
+    printf("\n[5] - Você pertence ao curso de Gestão");
+    }
+    
+    if (Num == 6){
+    printf("\n[6] - Você pertence ao curso de Enfermagem");
+    }
+    
+    if (Num == 7){
+    printf("\n[7] - Você pertence ao curso de Estética");
+    }
+    
+    if (Num == 8){
+    printf("\n[8] - Você pertence a Pós Graduação");
+    }
+    
+    if ((Num >= 9)||(Num<0)){
+    printf("\nVocê NÃO pertence a curso algum da FACULDADE SENAC");
+    }
+    
+    
+    return 0;
+}

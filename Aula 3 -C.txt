@@ -1,0 +1,139 @@
+
+------------------------------------------------------------------
+
+/******************************************************************************
+
+Feito por Victor C Magalhaes.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int Num,Cubo;
+    
+    printf("Digite Numero: ");
+    
+    scanf("%d", &Num);
+    Cubo = Num * Num * Num;
+    
+    printf("O Cubo de %d = %d", Num,Cubo);
+
+    return 0;
+}
+
+-----------------------------------------------------------------
+/******************************************************************************
+
+Exercicio 1.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int Num,NumPlus,NumLess;
+    
+    printf("Digite Numero: ");
+    
+    scanf("%d", &Num);
+    NumLess = Num - 1;
+    NumPlus = Num + 1;
+    
+    printf("Antecessor numero = %d, Sucessor numerico = %d", NumLess,NumPlus);
+
+    return 0;
+}
+-----------------------------------------------------------------
+/******************************************************************************
+
+Exercicio 2.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int Num,Percentual,Reajuste;
+    
+    printf("Digite o Salario: ");
+    
+    scanf("%d", &Num);
+    Percentual = Num /10;
+    Reajuste = Num + Percentual;
+    
+    printf("Reajuste de 10% = %d Novo salario = %d", Percentual,Reajuste);
+
+    return 0;
+}
+
+-----------------------------------------------------------------
+/******************************************************************************
+
+Exercicio 3.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    float V_Total,V_brancos,V_nulo,V_validos,Fracao;
+    
+    V_Total = 177;
+    V_brancos = 18;
+    V_nulo = 11;
+    V_validos = V_Total - (V_brancos + V_nulo);
+    
+    printf("Total de Votos = %.f, Votos brancos = %.f e Votos nulos = %.f ",V_Total,V_brancos,V_nulo);
+
+    
+    Fracao = (100 * V_validos)/V_Total;
+    printf("\nPorsentagem de votos validos = %.2f",Fracao);
+    
+    Fracao = (100 * V_brancos)/V_Total;
+    printf("\nPorsentagem de votos brancos = %.2f",Fracao);
+    
+    Fracao = (100 * V_nulo)/V_Total;
+    printf("\nPorsentagem de votos nulos = %.2f",Fracao);
+
+    return 0;
+}
+
+---------------------------------------------------------------------------------------------------------------
+/******************************************************************************
+
+Exercicio 4.
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    int Pres_Total, Pres_Pagas, Pres_Value, Calc;
+    
+    printf("Digite quantas prestações: ");
+    
+    scanf("%d", &Pres_Total);
+    
+    printf("Quantas prestações foram pagas? ");
+    
+    scanf("%d", &Pres_Pagas);
+    
+    printf("Quantas valor da prestação? ");
+    
+    scanf("%d", &Pres_Value);
+    
+    Calc = Pres_Value * (Pres_Total-Pres_Pagas);
+    printf("\nSaldo Devedor = %d",Calc);
+    
+    Calc = Pres_Total-Pres_Pagas;
+    printf("\nPrestações restantes: %d",Calc);
+    
+    Calc = (100 * Pres_Pagas)/Pres_Total;
+    printf("\nPorsentagem de prestações pagas: %d%%",Calc);    
+    
+    return 0;
+}
